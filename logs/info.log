@@ -1,0 +1,9 @@
+[2019-12-19 16:12:19.953] org.springframework.boot.StartupInfoLogger 55 logStarting - Starting LogtestApplication on tyfdeMacBook-Pro-4.local with PID 21904 (/Users/tyf/Project/Java/logtest/target/classes started by tyf in /Users/tyf/Project/Java/logtest)
+[2019-12-19 16:12:19.956] org.springframework.boot.SpringApplication 651 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2019-12-19 16:12:20.312] org.springframework.boot.StartupInfoLogger 61 logStarted - Started LogtestApplication in 0.749 seconds (JVM running for 1.467)
+[2019-12-19 16:13:50.591] org.springframework.boot.StartupInfoLogger 55 logStarting - Starting LogtestApplication on tyfdeMacBook-Pro-4.local with PID 21909 (/Users/tyf/Project/Java/logtest/target/classes started by tyf in /Users/tyf/Project/Java/logtest)
+[2019-12-19 16:13:50.594] org.springframework.boot.SpringApplication 651 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2019-12-19 16:13:50.918] org.springframework.boot.StartupInfoLogger 61 logStarted - Started LogtestApplication in 0.623 seconds (JVM running for 1.543)
+[2019-12-19 16:24:45.243] org.springframework.boot.StartupInfoLogger 55 logStarting - Starting LogtestApplication on tyfdeMacBook-Pro-4.local with PID 21955 (/Users/tyf/Project/Java/logtest/target/classes started by tyf in /Users/tyf/Project/Java/logtest)
+[2019-12-19 16:24:45.250] org.springframework.boot.SpringApplication 651 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2019-12-19 16:24:45.591] org.springframework.boot.StartupInfoLogger 61 logStarted - Started LogtestApplication in 0.669 seconds (JVM running for 1.375)

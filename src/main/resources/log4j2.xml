@@ -2,26 +2,17 @@
 <!-- 不打印log4j内部日志，配置文件刷新频率为30秒 -->
 <Configuration status="off" monitorInterval="30">
     <Appenders>
-        <Console name="STDOUT">
-            <PatternLayout pattern="%C{1.} %m %level MDC%X%n"/>
-        </Console>
-        <Jdbc name="databaseAppender" tableName="user" ignoreExceptions="false">
-            <ConnectionFactory class="com.tyf.logtest.common.ConnectionFactory" method="getDatabaseConnection"/>
-            <ColumnMapping name="user_name" />
-            <MessageLayout />
-        </Jdbc>
-        <!--异步写入数据库-->
-        <Async name="AsyncDatabaseAppender">
-            <appender-ref ref="databaseAppender"/>
-        </Async>
+        <Kafka name="Kafka" topic="tyfTopic">
+            <PatternLayout pattern="%date %message"/>
+            <Property name="bootstrap.servers">localhost:9092</Property>
+        </Kafka>
     </Appenders>
     <Loggers>
         <!-- 打印等级：off、fatal、error、warn、info、debug、trace、all -->
-        <logger name="com.tyf.logtest" level="info" >
-            <appender-ref ref="AsyncDatabaseAppender"/>
-        </logger>
+        <Logger name="kafkaLog" level="trace">
+            <AppenderRef ref="Kafka" />
+        </Logger>
         <Root level="fatal">
-            <AppenderRef ref="STDOUT"/>
         </Root>
     </Loggers>
 </Configuration>

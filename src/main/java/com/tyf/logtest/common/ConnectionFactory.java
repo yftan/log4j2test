@@ -9,8 +9,13 @@ import org.apache.commons.dbcp.PoolableConnection;
 import org.apache.commons.dbcp.PoolableConnectionFactory;
 import org.apache.commons.dbcp.PoolingDataSource;
 import org.apache.commons.pool.impl.GenericObjectPool;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.message.MapMessage;
 
 public class ConnectionFactory {
+    Logger logger = LogManager.getLogger();
+
     private static interface Singleton {
         final ConnectionFactory INSTANCE = new ConnectionFactory();
     }
@@ -28,6 +33,10 @@ public class ConnectionFactory {
         Properties properties = new Properties();
         properties.setProperty("user", "root");
         properties.setProperty("password", "xxxxxxxx"); //or get properties from some configuration file
+
+         MapMessage logMap = new MapMessage();
+         logMap.put("user_name", "test");
+         logger.info(logMap);
 
         GenericObjectPool<PoolableConnection>pool = new GenericObjectPool<PoolableConnection>();
         DriverManagerConnectionFactory connectionFactory = new DriverManagerConnectionFactory(

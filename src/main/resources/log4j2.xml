@@ -11,12 +11,16 @@
             <Column name="log_level" pattern="%level"/>
             <Column name="log_message" pattern="%message"/>
         </JDBC>
+        <!--异步写入数据库-->
+        <Async name="AsyncDatabaseAppender">
+            <appender-ref ref="databaseAppender"/>
+        </Async>
     </Appenders>
     <Loggers>
         <!-- 打印等级：off、fatal、error、warn、info、debug、trace、all -->
-        <Logger name="com.tyf.logtest" level="debug">
-            <appender-ref ref="databaseAppender"/>
-        </Logger>
+        <logger name="com.tyf.logtest" level="debug" >
+            <appender-ref ref="AsyncDatabaseAppender"/>
+        </logger>
         <Root level="off"></Root>
     </Loggers>
 </Configuration>

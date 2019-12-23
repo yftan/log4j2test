@@ -11,7 +11,7 @@ public class SimpleConsumer {
 
     public static void main(String[] args) {
         Properties props = new Properties();
-        props.put("bootstrap.servers", "192.168.127.129:9092,192.168.127.130:9092,192.168.127.131:9092");
+        props.put("bootstrap.servers", "127.0.0.1:9092,127.0.0.1:9093");
         props.put("group.id", "testGroup");
         props.put("enable.auto.commit", "true");
         props.put("auto.commit.interval.ms", "1000");

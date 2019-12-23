@@ -4,7 +4,7 @@
     <Appenders>
         <Kafka name="Kafka" topic="tyfTopic">
             <PatternLayout pattern="%date %message"/>
-            <Property name="bootstrap.servers">localhost:9092</Property>
+            <Property name="bootstrap.servers">127.0.0.1:9092</Property>
         </Kafka>
     </Appenders>
     <Loggers>
